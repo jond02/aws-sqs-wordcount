@@ -56,6 +56,7 @@ public class WordCounter {
             String content = fetchContent(address);
             words = processContent(content, address);
 
+            System.out.println("saving " + words);
             //save in database
             wordTotalRepository.save(words);
         }
